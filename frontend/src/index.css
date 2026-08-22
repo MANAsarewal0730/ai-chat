@@ -1,0 +1,146 @@
+/* ==========================================================================
+   AI Study Assistant - Codédex.io Inspired Game-Learning Theme 🎮 ⚔️ ✨
+   Retro Arcade / Neo-Brutalist Cozy Pixel & Gamified Study Suite
+   ========================================================================== */
+
+:root {
+  /* Codédex Surface Colors */
+  --bg-primary: #120f1d;             /* Deep arcade purple-night */
+  --bg-secondary: #1a162b;           /* Cozy dark slate plum */
+  --bg-card: #1f1a33;                /* Chunky game card surface */
+  --bg-card-hover: #262040;
+  --bg-input: #141122;
+
+  --border-codedex: #362e54;
+  --border-bold: #000000;
+  --border-subtle: rgba(255, 255, 255, 0.09);
+  --border-focus: #ffd803;
+
+  --text-primary: #fffffe;          /* Crisp Arcade White */
+  --text-secondary: #a7a9be;        /* Soft Cool Mist */
+  --text-muted: #72757e;            /* Muted Slate */
+  --text-inverse: #0f0e17;
+
+  /* Signature Codédex Color Accents 🎮 🌟 */
+  --accent-gold: #ffd803;           /* Codédex Sunflower XP Gold */
+  --accent-cyan: #00ebc7;           /* Retro Arcade Cyan */
+  --accent-pink: #ff5470;           /* 16-Bit Neon Pink */
+  --accent-purple: #8c52ff;         /* Quest Lilac Purple */
+  --accent-green: #2cb67d;          /* Success Level Mint */
+  --accent-blue: #38bdf8;           /* Cyber Sky Blue */
+
+  /* Gradients */
+  --gradient-primary: linear-gradient(135deg, #ffd803 0%, #ff5470 50%, #8c52ff 100%);
+  --gradient-gold: linear-gradient(135deg, #ffd803 0%, #ff9f1c 100%);
+  --gradient-cyan: linear-gradient(135deg, #00ebc7 0%, #38bdf8 100%);
+  --gradient-pink: linear-gradient(135deg, #ff5470 0%, #d946ef 100%);
+
+  /* Chunky 3D Drop Shadows (Codédex Signature!) */
+  --shadow-3d: 0 4px 0 #000000;
+  --shadow-3d-lg: 0 6px 0 #000000;
+  --shadow-3d-sm: 0 2px 0 #000000;
+  --shadow-card: 0 6px 0 rgba(0, 0, 0, 0.4);
+
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 14px;
+  --radius-xl: 18px;
+  --radius-full: 9999px;
+
+  /* Typography */
+  --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+
+  /* Snappy 3D click transitions */
+  --transition-click: 0.08s ease-in-out;
+  --transition-normal: 0.15s ease;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  min-height: 100vh;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: var(--font-sans);
+  font-size: 15px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+/* Cozy Codédex Dot Pattern Canvas */
+body {
+  background-color: #120f1d;
+  background-image: 
+    radial-gradient(circle at 10% 10%, rgba(140, 82, 255, 0.12) 0%, transparent 45%),
+    radial-gradient(circle at 90% 15%, rgba(255, 216, 3, 0.09) 0%, transparent 45%),
+    radial-gradient(circle at 50% 90%, rgba(0, 235, 199, 0.08) 0%, transparent 50%),
+    radial-gradient(rgba(255, 255, 255, 0.06) 1.5px, transparent 0);
+  background-size: 100% 100%, 100% 100%, 100% 100%, 28px 28px;
+  background-attachment: fixed;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 9px;
+  height: 9px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-primary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: #342c52;
+  border-radius: var(--radius-full);
+  border: 2px solid var(--bg-primary);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent-gold);
+}
+
+/* Codédex Code Editor Styling (VS Dark / Night Owl vibe) */
+pre, code {
+  font-family: var(--font-mono);
+}
+
+code {
+  background: rgba(255, 216, 3, 0.12);
+  color: #ffd803;
+  padding: 2px 7px;
+  border-radius: 6px;
+  font-size: 0.88em;
+  font-weight: 600;
+  border: 1px solid rgba(255, 216, 3, 0.25);
+}
+
+pre {
+  background: #0a0812;
+  border: 2px solid #2b2344;
+  border-radius: var(--radius-md);
+  padding: 1.2rem;
+  overflow-x: auto;
+  font-size: 0.88rem;
+  line-height: 1.55;
+  box-shadow: 0 4px 0 #000000;
+  position: relative;
+}
+
+pre code {
+  background: transparent;
+  padding: 0;
+  border: none;
+  color: #fffffe;
+}
+
+/* Focus styles */
+button:focus-visible, input:focus-visible, textarea:focus-visible, select:focus-visible {
+  outline: 2px solid var(--accent-gold);
+  outline-offset: 2px;
+}
